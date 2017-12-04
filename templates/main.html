@@ -54,6 +54,9 @@
         <div class="row">
             <!-- Left column of image displaying -->
             <div class="col-sm-6" id="image">
+                <div id="loading_canvas" style="position:absolute;z-index: 0">
+                    <img src="/static/image/loading_dots_2.gif">
+                </div>
                 <canvas class="basic-margin" id="image_canvas" width="400" height="400"
                         style="border:1px solid #000000;">
                 </canvas>
@@ -77,7 +80,7 @@
                     </div>
                 </form>
                 <!-- Default Image Bar -->
-                <div class="sscroll-bar" style="padding:0px 15px">
+                <div class="sscroll-bar" style="">
                     <button type="button" class="btn btn-default sbtn-left">
                         <span class="glyphicon glyphicon-arrow-left"></span>
                     </button>
@@ -112,7 +115,7 @@
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in">
                             <div class="panel-body" id="response_json">
-                                <p>Response in JSON</p>
+                                <pre>Response in JSON</pre>
                             </div>
                         </div>
                     </div>
@@ -210,6 +213,7 @@
         This website is mainly designed for CSE527 and CSE547 final projects.<br/>
         © 2017 Face Website Group, Zhengwei wei, Chenghong Li, Sangtian Wang. All rights reserved.
     </div>
+    <img class="none" src="/static/image/loading_cubes_2.gif">
 </div>
 </body>
 </html>

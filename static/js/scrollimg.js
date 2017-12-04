@@ -24,7 +24,6 @@ function setup() {
         }
         id_list.push('#' + obj[i].id);
     }
-    console.log($(".sscroll-bar"));
 }
 
 function init_bar(id) {
@@ -32,9 +31,9 @@ function init_bar(id) {
         $(id + " .sbtn-right").outerWidth(true));
     $(id + " .sscroll-img-list").css("width",
         ($(id).width() - $(id + " .sbtn-left").outerWidth(true) -
-            $(id + " .sbtn-right").outerWidth(true) - 7 ) + "px");
+            $(id + " .sbtn-right").outerWidth(true) - 10 ) + "px");
     var height = ($(id).width() - $(id + " .sbtn-left").outerWidth(true) -
-        $(id + " .sbtn-right").outerWidth(true) - 7 ) / active_count - 6;
+        $(id + " .sbtn-right").outerWidth(true) - 10 ) / active_count - 6;
     $(id).css("height", (height+4) + "px");
     $(id + " .sscroll-img-list").css("height", (height+2) + "px");
     $(id + " .sbtn-left").css("height", (height+2) + "px");
@@ -104,7 +103,7 @@ function display(id) {
 
         }
     }
-    if (focus[idx] > 0) {
+    if (focus[idx] >= 0) {
         $(id + ">div>div:eq(" + (focus[idx]) + ")").addClass("sscroll-imgpad-active");
         $(id + ">div>div:eq(" + (focus[idx]) + ")").removeClass("sscroll-imgpad-halfactive");
     }

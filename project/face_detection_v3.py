@@ -210,12 +210,14 @@ class face:
         ages = np.arange(0, 101).reshape(101, 1)
         predicted_genders = results[0]
         gender = "No Result"
-        if predicted_genders[0][0]<0.5:
+        print(predicted_genders[0][0])
+        if predicted_genders[0][0]>0.5:
             gender = 'Male'
         else:
             gender = "Female"
         predicted_ages = results[1].dot(ages).flatten()
         predicted_ages = int(predicted_ages)
+
         print(gender)
         print(predicted_ages)
         return predicted_ages,gender
